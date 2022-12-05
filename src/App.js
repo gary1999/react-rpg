@@ -6,34 +6,24 @@ function App() {
     const [tin, setTin] = useState(0);
     const [copper, setCopper] = useState(0);
 
-    const resource = [
+    const [resources, setResources] = useState([
         {
             id: 1,
             name: 'wood',
             amount: 0,
+            string: 'cut tree',
         },
         {
             id: 2,
-            name: 'tin',
+            name: 'stone',
             amount: 0,
+            string: 'mine stone',
         },
-        {
-            id: 3,
-            name: 'copper',
-            amount: 0,
-        },
-        {
-            id: 4,
-            name: 'steel',
-            amount: 0,
-        },
-    ];
+    ]);
 
-    const [resources, setResources] = useState(resource);
-
-    const incrementWood = () => {
+    const increment = (item) => {
         const newValue = resources.map((resource) => {
-            if (resource.id === 1) {
+            if (resource.name === item) {
                 return { ...resource, amount: resource.amount + 1 };
             } else {
                 return resource;
@@ -58,10 +48,22 @@ function App() {
                 <h1>RPG</h1>
                 <div id="main-container">
                     <div id="main-game">
-                        <button
-                            onClick={incrementWood}
+                        {/* <button
+                            onClick={() => increment('wood')}
                         >{`Chop down tree`}</button>
+                        <button
+                            onClick={() => increment('tin')}
+                        >{`Mine tin`}</button> */}
                         {/* <p>{resourceArray}</p> */}
+                        {resources.map((resource, index) => {
+                            return (
+                                <button
+                                    onClick={() => increment(resource.name)}
+                                >
+                                    {resource.string}
+                                </button>
+                            );
+                        })}
                     </div>
 
                     <div className="inventory">
