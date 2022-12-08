@@ -1,11 +1,8 @@
+import { logDOM } from '@testing-library/react';
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-    const [wood, setWood] = useState(0);
-    const [tin, setTin] = useState(0);
-    const [copper, setCopper] = useState(0);
-
     const [resources, setResources] = useState([
         {
             id: 1,
@@ -32,7 +29,9 @@ function App() {
         setResources(newValue);
     };
 
-    const incrementTin = () => {};
+    const nextDialogue = () => {
+        console.log('clicked');
+    };
 
     const branchTest = () => {
         //Test
@@ -47,23 +46,33 @@ function App() {
 
                 <h1>RPG</h1>
                 <div id="main-container">
-                    <div id="main-game">
-                        {/* <button
+                    <div id="gameplay-container">
+                        <div id="main-game">
+                            {/* <button
                             onClick={() => increment('wood')}
-                        >{`Chop down tree`}</button>
-                        <button
+                            >{`Chop down tree`}</button>
+                            <button
                             onClick={() => increment('tin')}
                         >{`Mine tin`}</button> */}
-                        {/* <p>{resourceArray}</p> */}
-                        {resources.map((resource, index) => {
-                            return (
-                                <button
-                                    onClick={() => increment(resource.name)}
-                                >
-                                    {resource.string}
-                                </button>
-                            );
-                        })}
+                            {/* <p>{resourceArray}</p> */}
+                            {resources.map((resource, index) => {
+                                return (
+                                    <button
+                                        onClick={() => increment(resource.name)}
+                                    >
+                                        {resource.string}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                        <div className="dialogue-box">
+                            <button
+                                id="dialogue-button"
+                                onClick={() => nextDialogue()}
+                            >
+                                Next
+                            </button>
+                        </div>
                     </div>
 
                     <div className="inventory">
@@ -75,7 +84,6 @@ function App() {
                             );
                         })}
                     </div>
-                    <div className="dialogue-box"></div>
                 </div>
             </div>
         </>
