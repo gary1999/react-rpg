@@ -17,13 +17,33 @@
 
 #equips-display {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 49%;
     height: 100%;
     /* margin-left: 20px; */
     border: 1px solid #00a4bd;
     padding-left: 10px;
     margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+#equips-display button,
+#inventory-display button {
+    width: 100px;
+    height: 75px;
+}
+
+#equipped-display {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+#stat-gains {
+    display: flex;
+    flex-direction: column;
+    width: 29%;
 }
 
 #inventory-display {
@@ -35,4 +55,6 @@
     border: 1px solid #00a4bd;
     padding-left: 10px;
     margin-bottom: 10px;
+
+    font-size: 20px;
 }

@@ -24,25 +24,39 @@ const ItemsTab = () => {
         }
     };
 
+    const equipEquips = (key, value) => {
+        if (value != 'Nothing') {
+            setEquips({ ...equips, [key]: value });
+            // setInventory({ ...inventory, [key]: value });
+            delete inventory[key];
+            console.log(inventory);
+        }
+    };
+
     return (
         <div id="items-tab">
             <div id="items-container">
                 <div id="equips-display">
-                    Equipped Items
-                    {Object.entries(equips).map(([key, value]) => {
-                        return (
-                            <button
-                                onClick={() => changeEquips(key, value)}
-                            >{`${key}: ${value}`}</button>
-                        );
-                    })}
+                    <div id="equipped-display">
+                        Equipped
+                        {Object.entries(equips).map(([key, value]) => {
+                            return (
+                                <button
+                                    id={`${key}Slot`}
+                                    onClick={() => changeEquips(key, value)}
+                                >{`${key}: ${value}`}</button>
+                            );
+                        })}
+                    </div>
+                    <div id="stat-gains">Stats Gained</div>
+                    <div id="stat-total">Stats Total</div>
                 </div>
                 <div id="inventory-display">
                     Inventory{' '}
                     {Object.entries(inventory).map(([key, value]) => {
                         return (
                             <button
-                                onClick={() => changeEquips(key, value)}
+                                onClick={() => equipEquips(key, value)}
                             >{`${key}: ${value}`}</button>
                         );
                     })}
