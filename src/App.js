@@ -5,6 +5,7 @@ import './CSS/Main.css';
 import './CSS/Tabs.css';
 import './CSS/Dialogue.css';
 import './CSS/Items.css';
+import './CSS/GatheringTab.css';
 
 import Tabs from './Components/TabComponent/Tabs';
 

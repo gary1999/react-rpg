@@ -58,8 +58,12 @@ const Tabs = () => {
                 <TabContent id="tab3" activeTab={activeTab}>
                     <GatheringTab />
                 </TabContent>
-                <TabContent id="tab4" activeTab={activeTab}></TabContent>
-                <TabContent id="tab5" activeTab={activeTab}></TabContent>
+                <TabContent id="tab4" activeTab={activeTab}>
+                    {/* <HuntingTab /> */}
+                </TabContent>
+                <TabContent id="tab5" activeTab={activeTab}>
+                    {/* <OptionsTab /> */}
+                </TabContent>
             </div>
 
             <DialogueBox />
