@@ -5,9 +5,7 @@ import ItemsTab from './ItemsTab';
 const MainTab = () => {
     return (
         <div id="main-tab">
-            <div id="main-container">
-                <div id="main-display"></div>
-            </div>
+            <div id="main-container"></div>
         </div>
     );
 };
