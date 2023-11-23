@@ -5,10 +5,17 @@ import ItemsTab from './ItemsTab';
 
 const monsterEncounter = () => {
     // console.log('Encounter');
-    for (let i = 0; i < 10; i++) {
-        console.log(monsters[Math.floor(Math.random() * monsters.length)]);
-    }
-    console.log('end');
+    // for (let i = 0; i < 10; i++) {
+    //     console.log(monsters[Math.floor(Math.random() * monsters.length)]);
+    // }
+
+    // let index = Object.keys(monsters).length;
+    // console.log(Math.floor(Math.random() * index));
+
+    //Generate a random monster name to display
+    console.log(
+        monsters[Math.floor(Math.random() * Object.keys(monsters).length)].name
+    );
 };
 
 const MainTab = () => {
