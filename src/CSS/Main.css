@@ -45,3 +45,14 @@
     margin-bottom: 10px;
 } */
 /* margin-left: 20px; */
+
+#monster-encounter {
+    background-color: blue;
+    height: 50px;
+    width: 100%;
+}
+
+#monster-encounter span {
+    font: 20px;
+    color: burlywood;
+}
