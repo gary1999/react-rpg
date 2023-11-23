@@ -29,7 +29,7 @@ const ItemsTab = () => {
             setEquips({ ...equips, [key]: value });
             // setInventory({ ...inventory, [key]: value });
             delete inventory[key];
-            console.log(inventory);
+            // console.log(inventory);
         }
     };
 
