@@ -19,6 +19,24 @@ const monsters = [
     },
     {
         id: 1,
+        name: 'Slime',
+        hp: 50,
+        exp: 50,
+    },
+    {
+        id: 2,
+        name: 'Wolf',
+        hp: 50,
+        exp: 50,
+    },
+    {
+        id: 3,
+        name: 'Orc',
+        hp: 50,
+        exp: 50,
+    },
+    {
+        id: 4,
         name: 'Dragon',
         hp: 50,
         exp: 50,
