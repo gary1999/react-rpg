@@ -1,15 +1,26 @@
 // import React from 'react';
 import React, { useState, useEffect } from 'react';
 import monsters from '../../Lists/Monsters';
-import Player from '../../../utils/Player';
+// import Player from '../../../utils/Player.json';
 
 const MainTab = () => {
-    var Player = {};
+    var player = {
+        Name: 'Player',
+        Level: 1,
+        Exp: 0,
+    };
 
     const [monsterName, setMonsterName] = useState('');
 
     // const [playerName, setPlayerName] = useState('Player');
     // const [playerLevel, setPlayerLevel] = useState(Player.level);
+
+    // const saveCharacter = () => {
+    //     console.log('Character saved');
+    // };
+    // const loadCharacter = () => {
+    //     console.log('Character loaded');
+    // };
 
     const monsterEncounter = () => {
         console.log('Encounter');
@@ -33,8 +44,10 @@ const MainTab = () => {
             <div id="main-container">
                 <div id="main-content">
                     <div id="content">
-                        <span>{}</span>
-                        <span>Level {Player.level}</span>
+                        {/* <button onClick={() => saveCharacter()}>Save</button>
+                        <button onClick={() => loadCharacter()}>Load</button> */}
+                        <span>{player.Name}</span>
+                        <span>Level {player.Level}</span>
                         <button
                             id="fight-monster-button"
                             onClick={() => monsterEncounter()}
