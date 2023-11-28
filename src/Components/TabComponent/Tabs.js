@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import FirstTab from './AllTabs/FirstTab';
-// import SecondTab from './AllTabs/SecondTab';
 
 import MainTab from './AllTabs/MainTab';
 import ItemsTab from './AllTabs/ItemsTab';
@@ -15,6 +13,7 @@ const Tabs = () => {
 
     return (
         <div className="Tabs">
+            {/* Renders navigation bar */}
             <ul className="nav">
                 <TabNavItem
                     title="Main"

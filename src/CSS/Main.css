@@ -67,25 +67,29 @@
     width: 50%;
 }
 
-#monster-encounter {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(29, 29, 37);
-    border: solid 1px white;
-    margin: 0;
-}
-
 #content span {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: center;
     font-size: 30px;
     color: burlywood;
 }
 
+#monster-encounter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(29, 29, 37);
+    /* border: solid 1px white; */
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
 #monster-encounter span {
     display: flex;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     justify-content: center;
     font-size: 30px;
     color: burlywood;
@@ -103,4 +107,11 @@
     margin-top: 20px;
     margin-bottom: 20px;
     /* border-radius: ; */
+}
+
+#monster-fight {
+    display: flex;
+    background-color: rgb(98, 98, 129);
+    height: 50%;
+    width: 100%;
 }
